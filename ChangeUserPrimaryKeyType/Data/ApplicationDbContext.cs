@@ -8,7 +8,7 @@ using ChangeUserPrimaryKeyType.Models;
 
 namespace ChangeUserPrimaryKeyType.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
